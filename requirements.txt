@@ -1,0 +1,22 @@
+# Pinned to the exact versions tested locally (Python 3.12.7, Windows).
+# Do NOT widen these ranges: leafmap / streamlit major upgrades change
+# function signatures and have already broken every map page once.
+#
+# Pinning also means the cloud build matches local behaviour 1:1. If a
+# version is ever unavailable for linux/amd64, pip fails loudly at build
+# time instead of silently shipping a half-working app.
+#
+# altair is imported directly by views/*.py, so it is declared explicitly
+# instead of relying on it arriving as a streamlit dependency.
+
+streamlit==1.66.1
+altair==6.3.0
+leafmap==0.63.1
+folium==0.20.0
+geopandas==1.2.0
+pyogrio==0.13.0
+pandas==3.1.0
+pydeck==0.9.3
+requests==2.34.2
+numpy==2.5.4
+xyzservices==2026.9.1
